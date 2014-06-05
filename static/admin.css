@@ -1,0 +1,32 @@
+.banner{
+	display: table;
+	width: 100%;
+	text-align: center;
+}
+	.banner-cell{
+		display: table-cell;
+		vertical-align: middle;
+	}
+		
+.current-jubo{
+	color: #fff;
+	margin : 50px;
+	padding: 5px;
+	background: #2c4985;
+}
+
+.input-form{
+	text-align: center;
+}
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+/*
+@media (min-width: 720px) {
+	.banner{
+		height:	480px;
+	}
+S}
+*/

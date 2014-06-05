@@ -1,0 +1,41 @@
+.banner{
+	margin: 0 auto;
+	display: table;
+	text-shadow: 0 1px 1px black;
+	text-align: center;
+	font-size: 2em;
+	height:	240px;
+}
+	.banner-cell{
+				display: table-cell;
+				vertical-align: middle;
+	}
+
+.button-string {
+	padding: 1em;
+	background: #333;
+	text-align: center;
+	color: #ddd;
+	border-radius: 10px;
+}
+
+.button-menu {
+	border-radius: 4px;
+	background: rgb(66, 184, 221); /* this is a light blue */
+}	
+		
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+@media (min-width: 1024px) {
+	.banner{
+		height:	480px;
+		font-size: 3em;
+	}
+	
+	.button-string {
+		font-size: 2em
+	}
+}

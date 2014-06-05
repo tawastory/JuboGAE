@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>애양교회 주보 &ndash; 개발중</title>
+
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
+
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+		<link rel="stylesheet" href="{{url_for('static', filename='side-menu.css')}}">
+		<link rel="stylesheet" href="{{url_for('static', filename='admin.css')}}">
+</head>
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading" href="#">관리자</a>
+            <ul>
+				<li><a href="{{url_for('admin_juboam')}}">주일오전 주보</a></li>
+            </ul>
+        </div>
+    </div>
+	
+    <div id="main">
+        <div class="content">
+			<div class="banner">
+				<div class="banner-cell">
+					<div class="pure-u-1 pure-u-md-1-1">
+						<div class="current-jubo">
+							<h2>오전 주보</h2>
+						</div>
+					</div>
+				</div>
+				<p>
+			</div>	
+			<div class="input-form">
+				<form class="pure-form" action="{{ url_for('update_juboam')}}" method='post'>
+					<label for="name">첫번째 찬송</label>
+					<input class="pure-input-2-3" name=firsthymn type="text" value="{{ jubo_am.firsthymn }}">장<br>
+					<label for="name">성시교독</label>
+					<input class="pure-input-2-3" name=psalm type="text" value="{{ jubo_am.psalm }}">번<br>
+					<label for="name">두번째 찬송</label>
+					<input class="pure-input-2-3" name=secondhymn type="text" value="{{ jubo_am.secondhymn }}">장<br>
+					<label for="name">성경 봉독</label>
+					<input class="pure-input-2-3" name=scripture type="text" value="{{ jubo_am.scripture }}"><br>
+					<label for="name">설교</label>
+					<input class="pure-input-2-3" name=sermon type="text" value="{{ jubo_am.sermon }}"><br>
+					<label for="name">봉헌</label>
+					<input class="pure-input-2-3" name=offertory type="text" value="{{ jubo_am.offertory }}">장<p>
+					<button type="submit" class="pure-button pure-button-primary">업데이트</button>
+				</form>
+			</div>
+		</div>
+    </div>
+</div>
+
+
+
+
+
+<script src="js/ui.js"></script>
+
+
+</body>
+</html>

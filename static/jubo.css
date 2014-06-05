@@ -1,0 +1,44 @@
+.banner{
+	margin: 0 auto;
+	display: table;
+	text-shadow: 0 1px 1px black;
+	text-align: center;
+	font-size: 2em;
+	height:	30px;
+}
+
+.l-box {
+	padding: 1em;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.list-box{
+	color: #ddd;
+	background: #333;
+}
+
+.menu-box{
+	padding: 10px;
+	text-align: center;
+	font-size: 1em;
+}
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+@media (min-width: 1024px) {
+	.banner{
+		height:	10px;
+	}
+	
+	.l-box {
+		font-size: 2em
+	}
+	
+	.menu-box{
+		font-size: 2em;
+	}
+}
